@@ -11,7 +11,7 @@ import json
 from gridfs import GridFS
 import os
 
-def _process_elenco(elencos:str) -> list[dict]:
+def _process_elenco(elencos):
     elencos = elencos.replace('\n', '')
     elencos = elencos.replace('"', '')
     elencos = elencos[1:-1]
@@ -34,7 +34,7 @@ def _process_elenco(elencos:str) -> list[dict]:
 
     return new_elenco
 
-def _process_genres(genres:str) -> list[str]:
+def _process_genres(genres):
     genres = genres.replace(' ', '')
     genres = genres.replace('\n', '')
     genres = genres.replace('"', '')
@@ -42,7 +42,7 @@ def _process_genres(genres:str) -> list[str]:
     genres = genres.split(',')
     return genres
 
-def _process_director(director:str) -> list[str]:
+def _process_director(director):
     director = director[1:-1]
     director = director.replace(' ', '')
     director = director.replace('\n', '')
